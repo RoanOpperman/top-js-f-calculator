@@ -1,0 +1,75 @@
+@layer reset {
+  /* Basic CSS Reset */
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif; /* Set a default font */
+    line-height: 1;
+  }
+
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  img,
+  picture,
+  video,
+  canvas,
+  svg {
+    display: block;
+    max-width: 100%;
+  }
+
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+    margin: 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+}
+@layer base {
+  :root {
+    --color-near-black: #161514;
+    --color-copper-gold: #ff983d;
+    --color-mid-gold: #cfb378;
+    --color-dark-gold: #704e04;
+    --color-off-blue: #556366;
+    --color-royal-blue: #002261;
+    --color-royal-red: #9b1c31;
+    --color-off-warm-white: #fcf7f7;
+  }
+  body {
+    background-color: var(--color-near-black);
+    color: var(--color-off-warm-white);
+  }
+}
