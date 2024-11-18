@@ -2,72 +2,91 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+      user-scalable="no"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="styles.css" />
     <title>a TOP Calculator</title>
   </head>
-  <body>
-    <main id="container">
+  <body scroll="no">
+    <main>
       <section id="calculator-body">
         <div id="display-container">
-          <div id="display"></div>
+          <div id="display">
+            <p>1,000,000</p>
+          </div>
         </div>
         <div id="input">
-          <div class="input-row">
-            <!--ROW 1-->
-            <div class="input-column"><button class="input-btn"></button></div>
-            <div class="input-column"><button class="input-btn"></button></div>
-            <div class="input-column">
-              <button class="input-btn">&#9003;</button>
-            </div>
-            <div class="input-column">
-              <button class="input-btn">&divide;</button>
-            </div>
-          </div>
-          <div class="input-row">
-            <!--ROW 2-->
-            <div class="input-column"><button class="input-btn">1</button></div>
-            <div class="input-column"><button class="input-btn">2</button></div>
-            <div class="input-column"><button class="input-btn">3</button></div>
-            <div class="input-column"><button class="input-btn">x</button></div>
-          </div>
-          <div class="input-row">
-            <!--ROW 3-->
-            <div class="input-column"><button class="input-btn">4</button></div>
-            <div class="input-column"><button class="input-btn">5</button></div>
-            <div class="input-column"><button class="input-btn">6</button></div>
-            <div class="input-column"><button class="input-btn">-</button></div>
-          </div>
-          <div class="input-row">
-            <!--ROW 3-->
-            <div class="input-column"><button class="input-btn">7</button></div>
-            <div class="input-column"><button class="input-btn">8</button></div>
-            <div class="input-column"><button class="input-btn">9</button></div>
-            <div class="input-column"><button class="input-btn">+</button></div>
-          </div>
-            <!--ROW 4-->
-            <div id="bottom-row" class="input-row">
-            <div id="bottom-row-left">
-              <div class="input-column">
-                <button class="input-btn">0</button>
-              </div>
-              <div class="input-column">
-                <button class="input-btn">.</button>
+          <div class="custom-row">
+            <!--row 1-->
+            <div id="half-row-left">
+              <div id="slider-container" class="col-div">
+                <div id="slider">c</div>
+                <div id="clear-slide-slot"></div>
               </div>
             </div>
-            <div id="bottom-row-right">
-              <div class="input-column">
-                <button id="equal-sign">=</button>
+            <div id="half-row-right">
+              <div class="col-div">
+                <button id="delete-btn" class="operator-btn">&#9003;</button>
+              </div>
+              <div class="col-div">
+                <button class="operator-btn">&divide;</button>
               </div>
             </div>
           </div>
+          <div class="row-div">
+            <!--row 2-->
+            <div class="col-div"><button class="calc-btn">1</button></div>
+            <div class="col-div"><button class="calc-btn">2</button></div>
+            <div class="col-div"><button class="calc-btn">3</button></div>
+            <div class="col-div">
+              <button class="operator-btn">&times;</button>
+            </div>
+          </div>
+          <div class="row-div">
+            <!--row 3-->
+            <div class="col-div"><button class="calc-btn">4</button></div>
+            <div class="col-div"><button class="calc-btn">5</button></div>
+            <div class="col-div"><button class="calc-btn">6</button></div>
+            <div class="col-div">
+              <button class="operator-btn">&minus;</button>
+            </div>
+          </div>
+          <div class="row-div">
+            <!--row 4-->
+            <div class="col-div"><button class="calc-btn">7</button></div>
+            <div class="col-div"><button class="calc-btn">8</button></div>
+            <div class="col-div"><button class="calc-btn">9</button></div>
+            <div class="col-div">
+              <button class="operator-btn">&plus;</button>
+            </div>
+          </div>
+          <div class="custom-row">
+            <!--row 5-->
+            <div id="half-row-left">
+              <div class="col-div"><button class="calc-btn">0</button></div>
+              <div class="col-div"><button class="calc-btn">.</button></div>
+            </div>
+            <div id="half-row-right">
+              <div class="col-div">
+                <button id="calc-equal-btn">&equals;</button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
       <section id="project-name">
         <h1>CALCULATOR</h1>
-        <h3>The Odin Project</h3>
+        <h3>the Odin Project</h3>
       </section>
     </main>
   </body>
