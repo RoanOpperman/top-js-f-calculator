@@ -93,6 +93,13 @@ main::before {
   background: linear-gradient(to right, rgb(231, 97, 97), rgb(172, 44, 44));
 }
 #display {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 3rem;
+  font-family: "Cardo";
+  color: white;
+  padding: 15px;
   background-color: #747474;
   box-shadow: inset 3px 4px 4px 1px rgb(0, 0, 0, 0.6),
     inset -1px -1px 1px 0px rgb(255, 255, 255, 0.7);
@@ -130,7 +137,6 @@ main::before {
   aspect-ratio: 1/1;
   border-radius: 100%;
   position: relative;
-  left: 0%;
   z-index: 1;
 }
 #clear-slide-slot-container {
@@ -176,7 +182,6 @@ main::before {
     -3px -3px 0px -2px rgb(255, 255, 255, 0.9);
   border-radius: 15px;
   position: relative;
-  display: inline-block;
 }
 .gold-edging::before {
   content: "";
@@ -228,15 +233,17 @@ main::before {
 }
 #delete-btn {
   font-size: 1.6rem;
+  padding: 0px 15px;
+  width: 100%;
 }
-.operator-btn {
+.operator-btns {
   height: 70px;
   aspect-ratio: 1/1;
   border-radius: 10px;
 
   color: rgb(212, 175, 71);
   font-family: "Cardo";
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: 900;
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4),
     -2px -2px 2px rgb(255, 255, 255, 0.4);
@@ -270,7 +277,7 @@ main::before {
     -1px -1px 1px rgb(255, 255, 255, 0.8);
   color: #a17a3b;
   font-family: "Cardo";
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: 900;
   box-shadow: inset 1px 1px 6px 3px rgba(0, 0, 0, 0.8),
     4px 4px 4px 1px rgba(0, 0, 0), -5px -5px 18px 1px rgb(209, 159, 22, 0.2);
@@ -322,6 +329,9 @@ main::before {
     width: 120%;
     right: 10%;
   }
+  #delete-btn {
+    font-size: 1.4rem;
+  }
 }
 
 /* Medium to large devices (e.g., tablets, small laptops) */
@@ -352,7 +362,7 @@ main::before {
   .calc-btn {
     height: 60px;
   }
-  .operator-btn {
+  .operator-btns {
     height: 60px;
   }
   #equals-btn {
@@ -360,6 +370,9 @@ main::before {
   }
   #clear-slide {
     height: 62px;
+  }
+  #delete-btn {
+    font-size: 1.2rem;
   }
 }
 @media (min-width: 48.0625em) and (max-width: 75em) and (orientation: landscape) {
@@ -375,7 +388,7 @@ main::before {
   .calc-btn {
     height: 60px;
   }
-  .operator-btn {
+  .operator-btns {
     height: 60px;
   }
   #equals-btn {
@@ -389,7 +402,7 @@ main::before {
   .calc-btn {
     height: 55px;
   }
-  .operator-btn {
+  .operator-btns {
     height: 55px;
   }
   #equals-btn {
@@ -422,7 +435,7 @@ main::before {
   .calc-btn {
     height: 55px;
   }
-  .operator-btn {
+  .operator-btns {
     height: 55px;
   }
   #equals-btn {
@@ -472,6 +485,18 @@ main::before {
     width: 100%;
   }
   #clear-slide {
-    height: 60px;
+    height: 50px;
+  }
+  .calc-btn {
+    height: 55px;
+  }
+  .operator-btns {
+    height: 55px;
+  }
+  #equals-btn {
+    height: 55px;
+  }
+  #clear-slide {
+    height: 57px;
   }
 }
